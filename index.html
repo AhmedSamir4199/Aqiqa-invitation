@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a22" />
+  <meta name="description" content="دعوة كريمة لحضور عقيقة علي أحمد علي صقر وديما مصطفى علي صقر وداليدا مصطفى علي صقر." />
+  <title>دعوة عقيقة | آل صقر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#102a22; --green2:#183c30; --gold:#c6a15b; --gold-light:#e8d4a2;
+      --cream:#f7f0df; --ink:#17352a; --muted:#6e674f;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--green);color:var(--ink);font-family:"Cairo",sans-serif}
+    button,a{font:inherit}
+    .intro{
+      min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;
+      padding:28px 18px;overflow:hidden;color:var(--cream);
+      background:
+        radial-gradient(ellipse at 50% 30%,rgba(198,161,91,.13),transparent 48%),
+        repeating-linear-gradient(135deg,rgba(232,212,162,.025) 0 1px,transparent 1px 12px),
+        linear-gradient(145deg,#0b211b,#17392d 55%,#0a1d18);
+      transition:opacity .8s ease,transform .8s ease;
+    }
+    .intro:before,.intro:after{content:"";position:absolute;inset:18px;border:1px solid rgba(198,161,91,.72);pointer-events:none}
+    .intro:after{inset:26px;border-color:rgba(232,212,162,.25)}
+    .corner{position:absolute;width:90px;height:90px;border-color:var(--gold);opacity:.85}
+    .c1{top:28px;right:28px;border-top:2px solid;border-right:2px solid;border-radius:0 24px 0 0}
+    .c2{top:28px;left:28px;border-top:2px solid;border-left:2px solid;border-radius:24px 0 0 0}
+    .c3{bottom:28px;right:28px;border-bottom:2px solid;border-right:2px solid;border-radius:0 0 24px 0}
+    .c4{bottom:28px;left:28px;border-bottom:2px solid;border-left:2px solid;border-radius:0 0 0 24px}
+    .intro-inner{position:relative;z-index:1;text-align:center;max-width:620px;animation:rise 1.1s both}
+    .bismillah{font-family:"Amiri",serif;font-size:clamp(1.35rem,4vw,1.8rem);color:var(--gold-light);margin:0 0 32px}
+    .ornament{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:20px auto}
+    .ornament:before,.ornament:after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--gold))}
+    .ornament:after{transform:scaleX(-1)}
+    .diamond{width:10px;height:10px;border:1px solid var(--gold);transform:rotate(45deg)}
+    .eyebrow{font-size:.85rem;letter-spacing:.08em;color:#d5c69e;margin:0 0 12px}
+    .intro h1{font-family:"Amiri",serif;font-size:clamp(2.4rem,9vw,4.5rem);font-weight:700;line-height:1.15;margin:0;color:#f8f0df}
+    .intro h1 span{display:block;font-size:.58em;color:var(--gold-light);margin-top:14px;font-weight:400}
+    .intro-copy{margin:26px auto 30px;line-height:2;color:#e8dfc9;font-size:1rem}
+    .open-btn{
+      border:1px solid var(--gold-light);border-radius:999px;padding:13px 35px;
+      color:#172b21;background:linear-gradient(135deg,#e8d4a2,#b88d45);font-weight:700;
+      box-shadow:0 8px 30px #0003;cursor:pointer;transition:transform .25s,box-shadow .25s;
+    }
+    .open-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px #0005}
+    .intro-note{font-size:.75rem;color:#bdb49b;margin-top:18px}
+    .invitation{display:none;min-height:100svh;padding:28px 14px 40px;background:
+      radial-gradient(ellipse at top,rgba(218,191,130,.18),transparent 45%),
+      repeating-linear-gradient(0deg,rgba(115,89,42,.018) 0 1px,transparent 1px 5px),
+      var(--cream);animation:fadeIn 1s ease both}
+    .invitation.visible{display:block}
+    .paper{max-width:760px;margin:0 auto;position:relative;padding:clamp(25px,6vw,58px) clamp(18px,6vw,60px);border:1px solid var(--gold);outline:1px solid rgba(198,161,91,.35);outline-offset:5px;box-shadow:0 18px 60px #102a221c;background:rgba(255,252,243,.58);text-align:center}
+    .paper:before,.paper:after{content:"✦";position:absolute;color:var(--gold);font-size:1.25rem;left:50%;transform:translateX(-50%);background:var(--cream);padding:0 12px}
+    .paper:before{top:-15px}.paper:after{bottom:-15px}
+    .top-kicker{font-family:"Amiri",serif;color:var(--muted);font-size:1.25rem;margin:0}
+    .verse{font-family:"Amiri",serif;font-size:clamp(1.35rem,4vw,2rem);line-height:1.9;color:var(--green);margin:16px auto 0}
+    .verse-ref{font-size:.8rem;color:var(--muted);margin:0}
+    .divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:20px auto;color:var(--gold)}
+    .divider:before,.divider:after{content:"";height:1px;width:min(25vw,120px);background:var(--gold)}
+    .divider span{font-size:1.05rem}
+    .intro-line{font-size:clamp(1rem,3.3vw,1.25rem);line-height:2;margin:12px 0 0}
+    .love{font-family:"Amiri",serif;font-size:1.35rem;color:#967338;margin:20px 0 0}
+    .aqiqah{font-family:"Amiri",serif;font-size:clamp(4rem,16vw,7rem);line-height:1.18;color:var(--green);margin:0;font-weight:700;text-shadow:1px 2px 0 #c6a15b44;letter-spacing:0}
+    .names{display:grid;gap:8px;margin:20px auto 18px;max-width:530px}
+    .name{font-family:"Amiri",serif;font-size:clamp(1.35rem,4.8vw,1.85rem);font-weight:700;color:var(--green2);padding:5px 0}
+    .blessing{line-height:2;margin:10px 0 22px;font-size:1rem}
+    .details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0 28px}
+    .detail{padding:10px 5px;border-left:1px solid #c9b783}
+    .detail:last-child{border-left:0}
+    .icon{display:block;font-size:1.55rem;color:#a17c37;margin-bottom:8px}
+    .detail-label{font-size:.82rem;color:var(--muted);margin:0 0 4px}
+    .detail-value{font-size:clamp(.88rem,2.8vw,1.08rem);font-weight:700;line-height:1.8;margin:0;color:var(--green)}
+    .closing{font-family:"Amiri",serif;font-size:clamp(1.4rem,4.5vw,1.9rem);color:#967338;margin:18px 0 5px}
+    .signature-label{font-size:.9rem;color:var(--muted);margin:18px 0 0}
+    .signature{font-family:"Amiri",serif;font-weight:700;font-size:clamp(1.5rem,5vw,2rem);margin:0;color:var(--green)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:30px auto 0;max-width:700px}
+    .action{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:1px solid var(--gold);border-radius:999px;padding:10px 18px;color:var(--green);background:#fffaf0;cursor:pointer;font-size:.9rem;transition:.2s}
+    .action:hover{background:#efe1bf;transform:translateY(-2px)}
+    .footer-note{text-align:center;font-size:.78rem;color:#9a8d6d;margin:25px 0 0}
+    .hidden{display:none!important}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:520px){
+      .intro:before{inset:12px}.intro:after{inset:19px}
+      .corner{width:55px;height:55px}
+      .c1,.c2{top:20px}.c3,.c4{bottom:20px}.c1,.c3{right:20px}.c2,.c4{left:20px}
+      .details{gap:0;margin:20px -5px}
+      .detail{padding:8px 3px}
+      .detail-label{font-size:.7rem}
+      .detail-value{font-size:.82rem}
+      .icon{font-size:1.3rem}
+      .paper{padding:28px 15px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <section class="intro" id="welcome" aria-label="مقدمة الدعوة">
+    <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+    <div class="intro-inner">
+      <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <div class="ornament"><span class="diamond"></span></div>
+      <p class="eyebrow">بكل الحب والود</p>
+      <h1>دعوة كريمة<span>لحضور عقيقة</span></h1>
+      <p class="intro-copy">فرحة تكتمل بوجود الأحباب،<br>ويزيدها جمالًا تشريفكم ومشاركتكم لنا.</p>
+      <button class="open-btn" id="openInvitation">افتح الدعوة ✦</button>
+      <p class="intro-note">اضغط لفتح الدعوة</p>
+    </div>
+  </section>
+
+  <main class="invitation" id="invitation">
+    <article class="paper">
+      <p class="top-kicker">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p class="verse">﴿ وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ ﴾</p>
+      <p class="verse-ref">(الأنبياء: 107)</p>
+      <div class="divider"><span>✦</span></div>
+      <p class="love">بكل الحب والود..</p>
+      <p class="intro-line">نتشرف بدعوتكم لمشاركتنا فرحة عقيقة أبنائنا</p>
+      <h2 class="aqiqah">عَقِيقَة</h2>
+      <div class="divider"><span>❖</span></div>
+      <div class="names">
+        <div class="name">علي أحمد علي صقر</div>
+        <div class="name">ديما مصطفى علي صقر</div>
+        <div class="name">داليدا مصطفى علي صقر</div>
+      </div>
+      <p class="blessing">وذلك بمشيئة الله تعالى،<br>ونسعد بمشاركتكم لنا هذه المناسبة السعيدة.</p>
+
+      <section class="details" aria-label="تفاصيل المناسبة">
+        <div class="detail">
+          <span class="icon" aria-hidden="true">⌖</span>
+          <p class="detail-label">المكان</p>
+          <p class="detail-value">الحرية أكوا بارك</p>
+        </div>
+        <div class="detail">
+          <span class="icon" aria-hidden="true">◷</span>
+          <p class="detail-label">الوقت</p>
+          <p class="detail-value">5 مساءً</p>
+        </div>
+        <div class="detail">
+          <span class="icon" aria-hidden="true">▦</span>
+          <p class="detail-label">الموعد</p>
+          <p class="detail-value">الثلاثاء<br>27 أكتوبر 2026</p>
+        </div>
+      </section>
+
+      <p class="closing">يسرّنا ويشرّفنا حضوركم</p>
+      <div class="divider"><span>✦</span></div>
+      <p class="signature-label">الداعي لكم</p>
+      <p class="signature">المهندس / علي السعيد صقر</p>
+    </article>
+
+    <nav class="actions" aria-label="خيارات الدعوة">
+      <a class="action" id="mapLink" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=الحرية+اكوا+بارك">📍 عرض المكان على الخريطة</a>
+      <button class="action" id="calendarButton">📅 أضف الموعد للتقويم</button>
+      <button class="action" id="shareButton">↗ مشاركة الدعوة</button>
+    </nav>
+    <p class="footer-note">تشريفكم يسعدنا، ونسأل الله أن يديم الأفراح والمسرّات.</p>
+  </main>
+
+  <script>
+    const openButton = document.getElementById('openInvitation');
+    const welcome = document.getElementById('welcome');
+    const invitation = document.getElementById('invitation');
+
+    openButton.addEventListener('click', () => {
+      welcome.style.opacity = '0';
+      welcome.style.transform = 'scale(.98)';
+      window.setTimeout(() => {
+        welcome.classList.add('hidden');
+        invitation.classList.add('visible');
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }, 450);
+    });
+
+    document.getElementById('calendarButton').addEventListener('click', () => {
+      const eventText = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Aqiqah Invitation//AR',
+        'CALSCALE:GREGORIAN',
+        'BEGIN:VEVENT',
+        'UID:aqiqah-20261027@invitation.local',
+        'DTSTAMP:20261023T000000Z',
+        'DTSTART:20261027T140000Z',
+        'DTEND:20261027T150000Z',
+        'SUMMARY:عقيقة أبناء المهندس علي السعيد صقر',
+        'LOCATION:الحرية أكوا بارك',
+        'DESCRIPTION:يسرنا ويشرفنا حضوركم',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\\r\\n');
+      const blob = new Blob([eventText], {type: 'text/calendar;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'دعوة-العقيقة.ics'; a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('shareButton').addEventListener('click', async () => {
+      const shareData = {
+        title: 'دعوة عقيقة | آل صقر',
+        text: 'يسرنا ويشرفنا دعوتكم لحضور عقيقة أبناء المهندس علي السعيد صقر، الثلاثاء 27 أكتوبر 2026 الساعة 5 مساءً في الحرية أكوا بارك.',
+        url: window.location.href
+      };
+      try {
+        if (navigator.share) await navigator.share(shareData);
+        else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(window.location.href);
+          alert('تم نسخ رابط الدعوة.');
+        } else {
+          prompt('انسخ رابط الدعوة:', window.location.href);
+        }
+      } catch (e) { /* المستخدم أغلق نافذة المشاركة */ }
+    });
+  </script>
+</body>
+</html>
